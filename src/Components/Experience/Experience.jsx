@@ -1,30 +1,36 @@
-import React from 'react'
-import './Experience.css'
-
-
+import React, { useContext } from "react";
+import "./Experience.css";
+import { themeContext } from "../../Context";
 
 const Experience = () => {
+  const theme = useContext(themeContext);
 
-    return (
-        <div className='Experience' id='Experience'>
-            <div className='AchieveMent'>
-                <div className='circle'>1+</div>
-                <span>years </span>
-                <span>Experience </span>
-            </div>
-            <div className='AchieveMent'>
-                <div className='circle'>5+</div>
-                <span>Completed </span>
-                <span>Projects </span>
-            </div>
-            <div className='AchieveMent'>
-                <div className='circle'>2+</div>
-                <span>Companies </span>
-                <span>Work </span>
-            </div>
-
+  const darkMode = theme.state.darkMode;
+  return (
+    <div className="Experience" id="Experience">
+      <div className="AchieveMent">
+        <div className="circle" style={{ color: darkMode ? "#242049" : "" }}>
+          1+
         </div>
-    )
-}
+        <span>years </span>
+        <span>Experience </span>
+      </div>
+      <div className="AchieveMent">
+        <div className="circle" style={{ color: darkMode ? "#242049" : "" }}>
+          5+
+        </div>
+        <span>Completed </span>
+        <span>Projects </span>
+      </div>
+      <div className="AchieveMent">
+        <div className="circle" style={{ color: darkMode ? "#242049" : "" }}>
+          2+
+        </div>
+        <span>Companies </span>
+        <span>Work </span>
+      </div>
+    </div>
+  );
+};
 
-export default Experience
+export default Experience;
