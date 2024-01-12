@@ -77,13 +77,13 @@
     padding: 0;
   }
 
-  /* .cards { */
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* gap: 17rem; */
-  /* } */
-  /*  */
-  /* .cards > * { */
-  /* position: static; */
-  /* } */
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 17rem;
+  }
+
+  .cards > * {
+    position: static;
+  }
 }

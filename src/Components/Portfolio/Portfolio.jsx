@@ -70,18 +70,18 @@ const Portfolio = () => {
         className="portfolio-slider"
       >
         <SwiperSlide>
-          <a href="https://e-crime.vercel.app/">
+          <a href="https://e-crime.vercel.app/" target="_blank">
             {" "}
             <iframe src="https://e-crime.vercel.app/"></iframe>
           </a>
         </SwiperSlide>
-
         <SwiperSlide>
-          <a href="https://tkstore.vercel.app/">
+          <a href="https://tkstore.vercel.app/" target="_blank">
             {" "}
             <iframe src="https://tkstore.vercel.app/"></iframe>
           </a>
         </SwiperSlide>
+        s
       </Swiper>
 
       {/* <Slider {...settings}>
