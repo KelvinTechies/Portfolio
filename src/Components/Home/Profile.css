@@ -129,6 +129,7 @@
     flex-direction: column;
     height: 55rem;
     gap: 6rem;
+    margin-bottom: 10rem;
   }
   .i-right {
     transform: scale(0.8);
