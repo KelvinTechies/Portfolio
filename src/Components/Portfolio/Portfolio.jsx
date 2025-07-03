@@ -81,7 +81,81 @@ const Portfolio = () => {
             <iframe src="https://tkstore.vercel.app/"></iframe>
           </a>
         </SwiperSlide>
-        s
+         
+         <SwiperSlide>
+          <a href="https://nifronthill.com" target="_blank">
+            {" "}
+            <iframe src="https://nifronthill.com"></iframe>
+          </a>
+        </SwiperSlide>
+      </Swiper>
+         <Swiper
+        spaceBetween={30}
+        slidesPerView={3}
+        grabCursor={true}
+        className="portfolio-slider"
+      >
+        <SwiperSlide>
+          <a href="https://macwealth.org/" target="_blank">
+            {" "}
+            <iframe src="https://macwealth.org/"></iframe>
+          </a>
+        </SwiperSlide>
+        <SwiperSlide>
+          <a href="https://skillhub.ng" target="_blank">
+            {" "}
+            <iframe src="https://skillhub.ng"></iframe>
+          </a>
+        </SwiperSlide>
+          <SwiperSlide>
+          <a href="https://nirides.com" target="_blank">
+            {" "}
+            <iframe src="https://nirides.com"></iframe>
+          </a>
+        </SwiperSlide>
+        
+      </Swiper>
+        <Swiper
+        spaceBetween={30}
+        slidesPerView={3}
+        grabCursor={true}
+        className="portfolio-slider"
+      >
+        <SwiperSlide>
+          <a href="https://estrelaconta.com/sign-in" target="_blank">
+            {" "}
+            <iframe src="https://estrelaconta.com/sign-in"></iframe>
+          </a>
+        </SwiperSlide>
+        <SwiperSlide>
+          <a href="https://ogsupershop.com/" target="_blank">
+            {" "}
+            <iframe src="https://ogsupershop.com/"></iframe>
+          </a>
+        </SwiperSlide>
+          <SwiperSlide>
+          <a href="https://solarvast.ng/" target="_blank">
+            {" "}
+            <iframe src="https://solarvast.ng/"></iframe>
+          </a>
+        </SwiperSlide>
+        
+      </Swiper>
+        <Swiper
+        spaceBetween={30}
+        slidesPerView={3}
+        grabCursor={true}
+        className="portfolio-slider"
+      >
+       
+        <SwiperSlide>
+          <a href="https://nisubs.com" target="_blank">
+            {" "}
+            <iframe src="https://nisubs.com/"></iframe>
+          </a>
+        </SwiperSlide>
+         
+        
       </Swiper>
 
       {/* <Slider {...settings}>

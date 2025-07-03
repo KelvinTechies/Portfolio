@@ -1,40 +1,124 @@
-:root
-{
-  --yellow:#eeb60b;
-  --orange:#fca61f;
-  --black:#242049;
-  --gray:#788097;
-  --blueCard:#ddf8fe;
-  --purple:rgb(238 210 255);
-  --boxShadow:0px 19px 60px rgb(0 0 0 /8%);
-  --orangeCard:rgba(252,166,31, 0.45);
-  --smBoxShadow:-79px 51px 60px rgba(0,0,0, 0.08);
+:root {
+  --yellow: #eeb60b;
+  --orange: #fca61f;
+  --black: #242049;
+  --gray: #788097;
+  --blueCard: #ddf8fe;
+  --purple: rgb(238 210 255);
+  --boxShadow: 0px 19px 60px rgb(0 0 0 /8%);
+  --orangeCard: rgba(252, 166, 31, 0.45);
+  --smBoxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
+  
+  /* Light mode colors */
+  --bg-color: #ffffff;
+  --text-color: #242049;
+  --card-bg: #ffffff;
 }
 
-.App{
-  padding:0.5rem 3.5rem;
-  overflow:hidden;
-  color:var(--black);
-}
-.button{
-  border-radius:34px;
-  border:none;
-  color:#fff;
-  background:linear-gradient(180deg, #fdc50f 28.71%, #fb982f 99.36%);
-  font-size:16px;
-  padding:11px 26px 11px 26px;
-  box-shadow:0px 20px 24px 3px rgba(251, 161. 40, 0.42);
-}
-
-.button:hover{
-  background:white;
-  cursor:pointer;
-  color:var(--orange);
-  border:solid 1px var(--orange);
+/* Dark mode colors */
+[data-theme="dark"] {
+  --yellow: #ffd700;
+  --orange: #ff8c00;
+  --black: #ffffff;
+  --gray: #b0b0b0;
+  --blueCard: #1a2332;
+  --purple: rgb(75 85 155);
+  --boxShadow: 0px 19px 60px rgb(255 255 255 /8%);
+  --orangeCard: rgba(255, 140, 0, 0.45);
+  --smBoxShadow: -79px 51px 60px rgba(255, 255, 255, 0.08);
+  
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;
+  --card-bg: #2d2d2d;
 }
 
-@media screen and (max-width:576px){
-  .App{
-    padding:0.5rem 1rem;
+body {
+  background-color: var(--bg-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.App {
+  padding: 0.5rem 3.5rem;
+  overflow: hidden;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button {
+  border-radius: 34px;
+  border: none;
+  color: #fff;
+  background: linear-gradient(180deg, #fdc50f 28.71%, #fb982f 99.36%);
+  font-size: 16px;
+  padding: 11px 26px 11px 26px;
+  box-shadow: 0px 20px 24px 3px rgba(251, 161, 40, 0.42);
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background: white;
+  cursor: pointer;
+  color: var(--orange);
+  border: solid 1px var(--orange);
+}
+
+/* Dark mode button styles */
+[data-theme="dark"] .button:hover {
+  background: var(--card-bg);
+  color: var(--orange);
+  border: solid 1px var(--orange);
+}/* Add this to your existing App.css */
+
+.App {
+  padding: 0.5rem 3.5rem;
+  overflow: hidden;
+  color: var(--black);
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light mode (default) */
+.App.light {
+  background-color: #ffffff;
+  color: #242049;
+}
+
+/* Dark mode */
+.App.dark {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+/* Dark mode adjustments for other elements */
+.App.dark .card,
+.App.dark .intro,
+.App.dark .services,
+.App.dark .experience,
+.App.dark .works,
+.App.dark .portfolio,
+.App.dark .testimonials,
+.App.dark .contact-form,
+.App.dark .footer {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+
+/* Dark mode text adjustments */
+.App.dark h1,
+.App.dark h2,
+.App.dark h3,
+.App.dark h4,
+.App.dark h5,
+.App.dark h6,
+.App.dark p,
+.App.dark span {
+  color: #ffffff;
+}
+
+@media screen and (max-width: 576px) {
+  .App {
+    padding: 0.5rem 1rem;
   }
 }

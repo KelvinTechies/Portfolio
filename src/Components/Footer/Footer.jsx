@@ -7,7 +7,7 @@ import LinkedIn from "@iconscout/react-unicons/icons/uil-linkedin";
 import "./Footer.css";
 const Footer = () => {
   return (
-    <div className="footer">
+      <div className="footer">
       <img src={wave} alt="" style={{ width: "100%" }} />
 
       <div className="f-content">
@@ -26,7 +26,9 @@ const Footer = () => {
           </a>
         </div>
       </div>
-    </div>
+    </div> 
+
+    
   );
 };
 
