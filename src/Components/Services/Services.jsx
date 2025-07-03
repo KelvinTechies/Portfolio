@@ -5,7 +5,7 @@ import heartEmoji from "../../Images/heartemoji.png";
 import glasses from "../../Images/glasses.png";
 import { motion } from "framer-motion";
 // import resume from "../../Images/OviasuyiOsagioduwaResume.pdf";
-import resume from "../../Images/Resume/OviasuyiOsagioduwaResume.pdf.pdf";
+import resume from "../../Images/Resume/OviasuyiOsagioduwaResume.pdf";
 import { themeContext } from "../../Context";
 const Services = () => {
   const theme = useContext(themeContext);
