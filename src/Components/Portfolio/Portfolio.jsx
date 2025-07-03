@@ -81,7 +81,12 @@ const Portfolio = () => {
             <iframe src="https://tkstore.vercel.app/"></iframe>
           </a>
         </SwiperSlide>
-        s
+          <SwiperSlide>
+          <a href="https://tkstore.vercel.app/" target="_blank">
+            {" "}
+            <iframe src="https://skillhub.ng/"></iframe>
+          </a>
+        </SwiperSlide>
       </Swiper>
 
       {/* <Slider {...settings}>
