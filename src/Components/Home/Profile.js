@@ -1,7 +1,7 @@
 import React from "react";
 
 const Profile = () => {
-  const me = "/assets/img/hero/osas_1.png";
+  const me = "/assets/img/hero/Osas_1.png";
 
   return (
     <div className="page page--current" id="home">
