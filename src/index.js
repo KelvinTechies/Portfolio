@@ -4,6 +4,9 @@ import './index.css';
 import App from './App';
 // import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from './Context'
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
