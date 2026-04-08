@@ -1,178 +1,205 @@
-import React, { useContext } from "react";
-import "./Portfolio.css";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import Sidebar from "../../Images/sidebar.png";
-import Ecommerce from "../../Images/ecommerce.png";
-import { themeContext } from "../../Context";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import React from "react";
 
 const Portfolio = () => {
-  const theme = useContext(themeContext);
-
-  const darkMode = theme.state.darkMode;
-
-  var settings = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-        },
-      },
-
-      {
-        breakpoint: 991,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
   return (
-    <div className="portfolio" id="Portfolio">
-      <span style={{ color: darkMode ? "white" : "" }}> Recents Projects</span>
-      <span>Portfolio</span>
-
-      <Swiper
-        spaceBetween={30}
-        slidesPerView={3}
-        grabCursor={true}
-        className="portfolio-slider"
-      >
-        <SwiperSlide>
-          <a href="https://e-crime.vercel.app/" target="_blank">
-            {" "}
-            <iframe src="https://e-crime.vercel.app/"></iframe>
-          </a>
-        </SwiperSlide>
-        <SwiperSlide>
-          <a href="https://tkstore.vercel.app/" target="_blank">
-            {" "}
-            <iframe src="https://tkstore.vercel.app/"></iframe>
-          </a>
-        </SwiperSlide>
-         
-         <SwiperSlide>
-          <a href="https://nifronthill.com" target="_blank">
-            {" "}
-            <iframe src="https://nifronthill.com"></iframe>
-          </a>
-        </SwiperSlide>
-      </Swiper>
-         <Swiper
-        spaceBetween={30}
-        slidesPerView={3}
-        grabCursor={true}
-        className="portfolio-slider"
-      >
-        <SwiperSlide>
-          <a href="https://macwealth.org/" target="_blank">
-            {" "}
-            <iframe src="https://macwealth.org/"></iframe>
-          </a>
-        </SwiperSlide>
-        <SwiperSlide>
-          <a href="https://skillhub.ng" target="_blank">
-            {" "}
-            <iframe src="https://skillhub.ng"></iframe>
-          </a>
-        </SwiperSlide>
-          <SwiperSlide>
-          <a href="https://nirides.com" target="_blank">
-            {" "}
-            <iframe src="https://nirides.com"></iframe>
-          </a>
-        </SwiperSlide>
-        
-      </Swiper>
-        <Swiper
-        spaceBetween={30}
-        slidesPerView={3}
-        grabCursor={true}
-        className="portfolio-slider"
-      >
-        <SwiperSlide>
-          <a href="https://estrelaconta.com/sign-in" target="_blank">
-            {" "}
-            <iframe src="https://estrelaconta.com/sign-in"></iframe>
-          </a>
-        </SwiperSlide>
-        <SwiperSlide>
-          <a href="https://ogsupershop.com/" target="_blank">
-            {" "}
-            <iframe src="https://ogsupershop.com/"></iframe>
-          </a>
-        </SwiperSlide>
-          <SwiperSlide>
-          <a href="https://solarvast.ng/" target="_blank">
-            {" "}
-            <iframe src="https://solarvast.ng/"></iframe>
-          </a>
-        </SwiperSlide>
-        
-      </Swiper>
-        <Swiper
-        spaceBetween={30}
-        slidesPerView={3}
-        grabCursor={true}
-        className="portfolio-slider"
-      >
-       
-        <SwiperSlide>
-          <a href="https://nisubs.com" target="_blank">
-            {" "}
-            <iframe src="https://nisubs.com/"></iframe>
-          </a>
-        </SwiperSlide>
-         
-        
-      </Swiper>
-
-      {/* <Slider {...settings}>
-        <div>
-          <a href="https://e-crime.vercel.app/">
-            {" "}
-            <iframe src="https://e-crime.vercel.app/"></iframe>
-          </a>
+    <div className="page" id="portfolio">
+      <div className="portfolio">
+        {/* Page Title Starts */}
+        <div className="title-section text-left text-sm-center">
+          <h2>my <span>portfolio</span></h2>
+          <span className="title-bg">works</span>
         </div>
-        <div>
-          <a href="https://tkstore.vercel.app/">
-            {" "}
-            <iframe src="https://tkstore.vercel.app/"></iframe>
-          </a>
+        {/* Page Title Ends */}
+        
+        <div className="main-content text-center">
+          <div id="grid-gallery" className="container grid-gallery">
+            {/* Portfolio Grid Starts */}
+            <div className="grid-wrap">
+              <ul className="row grid gridlist">
+                <li>
+                  <figure>
+                    <div style={{ width: '100%', paddingTop: '75%', position: 'relative', overflow: 'hidden', borderRadius: '5px' }}>
+                      <iframe src="https://e-crime.vercel.app/" title="E-Crime Project" scrolling="no" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none', border: 'none' }}></iframe>
+                    </div>
+                    <div><span>E-Crime Project</span></div>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <div style={{ width: '100%', paddingTop: '75%', position: 'relative', overflow: 'hidden', borderRadius: '5px' }}>
+                      <iframe src="https://tkstore.vercel.app/" title="TKStore" scrolling="no" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none', border: 'none' }}></iframe>
+                    </div>
+                    <div><span>TKStore</span></div>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <div style={{ width: '100%', paddingTop: '75%', position: 'relative', overflow: 'hidden', borderRadius: '5px' }}>
+                      <iframe src="https://mysoundsglobal.com" title="MySoundsGlobal" scrolling="no" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none', border: 'none' }}></iframe>
+                    </div>
+                    <div><span>MySoundsGlobal</span></div>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <div style={{ width: '100%', paddingTop: '75%', position: 'relative', overflow: 'hidden', borderRadius: '5px' }}>
+                      <iframe src="https://macwealth.org/" title="Macwealth" scrolling="no" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none', border: 'none' }}></iframe>
+                    </div>
+                    <div><span>Macwealth</span></div>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <div style={{ width: '100%', paddingTop: '75%', position: 'relative', overflow: 'hidden', borderRadius: '5px' }}>
+                      <iframe src="https://bendesignstudio.com" title="Ben Design Studio" scrolling="no" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none', border: 'none' }}></iframe>
+                    </div>
+                    <div><span>Ben Design Studio</span></div>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <div style={{ width: '100%', paddingTop: '75%', position: 'relative', overflow: 'hidden', borderRadius: '5px' }}>
+                      <iframe src="https://theallroundchild.com.com" title="TARC" scrolling="no" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none', border: 'none' }}></iframe>
+                    </div>
+                    <div><span>TARC</span></div>
+                  </figure>
+                </li>
+              </ul>
+            </div>
+            {/* Portfolio Grid Ends */}
+            
+            {/* Portfolio Details Starts */}
+            <div className="slideshow">
+              <ul>
+                <li>
+                  <figure>
+                    <figcaption>
+                      <h3>E-Crime Project</h3>
+                      <div className="row open-sans-font">
+                        <div className="col-12 col-sm-6 mb-2">
+                          <i className="fa fa-file-text-o pr-2"></i><span className="project-label">Project</span>: <span className="ft-wt-600 uppercase">Website</span>
+                        </div>
+                        <div className="col-12 col-sm-6 mb-2">
+                          <i className="fa fa-external-link pr-2"></i><span className="project-label">Preview</span>: <span className="ft-wt-600 uppercase"><a href="https://e-crime.vercel.app/" target="_blank" rel="noreferrer">View Site</a></span>
+                        </div>
+                      </div>
+                    </figcaption>
+                    <div style={{ width: '100%', height: '60vh', marginTop: '20px', borderRadius: '10px', overflow: 'hidden' }}>
+                      <iframe src="https://e-crime.vercel.app/" title="E-Crime Project" style={{ width: '100%', height: '100%', border: 'none' }}></iframe>
+                    </div>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <figcaption>
+                      <h3>TKStore</h3>
+                      <div className="row open-sans-font">
+                        <div className="col-12 col-sm-6 mb-2">
+                          <i className="fa fa-file-text-o pr-2"></i><span className="project-label">Project</span>: <span className="ft-wt-600 uppercase">Website</span>
+                        </div>
+                        <div className="col-12 col-sm-6 mb-2">
+                          <i className="fa fa-external-link pr-2"></i><span className="project-label">Preview</span>: <span className="ft-wt-600 uppercase"><a href="https://tkstore.vercel.app/" target="_blank" rel="noreferrer">View Site</a></span>
+                        </div>
+                      </div>
+                    </figcaption>
+                    <div style={{ width: '100%', height: '60vh', marginTop: '20px', borderRadius: '10px', overflow: 'hidden' }}>
+                      <iframe src="https://tkstore.vercel.app/" title="TKStore" style={{ width: '100%', height: '100%', border: 'none' }}></iframe>
+                    </div>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <figcaption>
+                      <h3>MySounds Global</h3>
+                      <div className="row open-sans-font">
+                        <div className="col-12 col-sm-6 mb-2">
+                          <i className="fa fa-file-text-o pr-2"></i><span className="project-label">Project</span>: <span className="ft-wt-600 uppercase">Website</span>
+                        </div>
+                        <div className="col-12 col-sm-6 mb-2">
+                          <i className="fa fa-external-link pr-2"></i><span className="project-label">Preview</span>: <span className="ft-wt-600 uppercase"><a href="https://mysoundsglobal.com" target="_blank" rel="noreferrer">View Site</a></span>
+                        </div>
+                      </div>
+                    </figcaption>
+                    <div style={{ width: '100%', height: '60vh', marginTop: '20px', borderRadius: '10px', overflow: 'hidden' }}>
+                      <iframe src="https://mysoundsglobal.com" title="MySoundsGlobal" style={{ width: '100%', height: '100%', border: 'none' }}></iframe>
+                    </div>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <figcaption>
+                      <h3>Macwealth</h3>
+                      <div className="row open-sans-font">
+                        <div className="col-12 col-sm-6 mb-2">
+                          <i className="fa fa-file-text-o pr-2"></i><span className="project-label">Project</span>: <span className="ft-wt-600 uppercase">Website</span>
+                        </div>
+                        <div className="col-12 col-sm-6 mb-2">
+                          <i className="fa fa-external-link pr-2"></i><span className="project-label">Preview</span>: <span className="ft-wt-600 uppercase"><a href="https://macwealth.org/" target="_blank" rel="noreferrer">View Site</a></span>
+                        </div>
+                      </div>
+                    </figcaption>
+                    <div style={{ width: '100%', height: '60vh', marginTop: '20px', borderRadius: '10px', overflow: 'hidden' }}>
+                      <iframe src="https://macwealth.org/" title="Macwealth" style={{ width: '100%', height: '100%', border: 'none' }}></iframe>
+                    </div>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <figcaption>
+                      <h3>Ben Design Studio</h3>
+                      <div className="row open-sans-font">
+                        <div className="col-12 col-sm-6 mb-2">
+                          <i className="fa fa-file-text-o pr-2"></i><span className="project-label">Project</span>: <span className="ft-wt-600 uppercase">Website</span>
+                        </div>
+                        <div className="col-12 col-sm-6 mb-2">
+                          <i className="fa fa-external-link pr-2"></i><span className="project-label">Preview</span>: <span className="ft-wt-600 uppercase"><a href="https://bendesignstudio.com" target="_blank" rel="noreferrer">View Site</a></span>
+                        </div>
+                      </div>
+                    </figcaption>
+                    <div style={{ width: '100%', height: '60vh', marginTop: '20px', borderRadius: '10px', overflow: 'hidden' }}>
+                      <iframe src="https://bendesignstudio.com" title="Ben Design Studio" style={{ width: '100%', height: '100%', border: 'none' }}></iframe>
+                    </div>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <figcaption>
+                      <h3>TARC</h3>
+                      <div className="row open-sans-font">
+                        <div className="col-12 col-sm-6 mb-2">
+                          <i className="fa fa-file-text-o pr-2"></i><span className="project-label">Project</span>: <span className="ft-wt-600 uppercase">Website</span>
+                        </div>
+                        <div className="col-12 col-sm-6 mb-2">
+                          <i className="fa fa-external-link pr-2"></i><span className="project-label">Preview</span>: <span className="ft-wt-600 uppercase"><a href="https://theallroundchild.com" target="_blank" rel="noreferrer">View Site</a></span>
+                        </div>
+                      </div>
+                    </figcaption>
+                    <div style={{ width: '100%', height: '60vh', marginTop: '20px', borderRadius: '10px', overflow: 'hidden' }}>
+                      <iframe src="https://theallroundchild.com" title="TARC" style={{ width: '100%', height: '100%', border: 'none' }}></iframe>
+                    </div>
+                  </figure>
+                </li>
+              </ul>
+              {/* Portfolio Navigation Starts */}
+              <nav>
+                <span className="icon nav-prev">
+                  <img src="/img/projects/navigation/left-arrow.png" alt="previous" />
+                </span>
+                <span className="icon nav-next">
+                  <img src="/img/projects/navigation/right-arrow.png" alt="next" />
+                </span>
+                <span className="nav-close">
+                  <img src="/img/projects/navigation/close-button.png" alt="close" />
+                </span>
+              </nav>
+              {/* Portfolio Navigation Ends */}
+            </div>
+            {/* Portfolio Details Ends */}
+          </div>
         </div>
-      </Slider> */}
+      </div>
     </div>
   );
 };
+
 export default Portfolio;
